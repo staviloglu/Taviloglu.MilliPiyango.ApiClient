@@ -1,0 +1,1 @@
+# Taviloglu.MilliPiyango.ApiClient
