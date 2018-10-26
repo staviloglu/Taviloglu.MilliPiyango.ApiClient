@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Taviloglu.MilliPiyango.ApiClient.SuperLoto
 {
-    public class SuperLotoGuess : LotoGuess
+    public class SuperLotoGuess : SixNumberGuess
     {
         public SuperLotoGuess(List<int> numbers) :base(numbers)
         {

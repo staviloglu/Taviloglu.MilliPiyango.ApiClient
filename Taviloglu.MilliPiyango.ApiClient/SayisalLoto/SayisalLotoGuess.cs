@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Taviloglu.MilliPiyango.ApiClient.SayisalLoto
 {
-    public class SayisalLotoGuess : LotoGuess
+    public class SayisalLotoGuess : SixNumberGuess
     {
         public SayisalLotoGuess(List<int> numbers) : base(numbers)
         {

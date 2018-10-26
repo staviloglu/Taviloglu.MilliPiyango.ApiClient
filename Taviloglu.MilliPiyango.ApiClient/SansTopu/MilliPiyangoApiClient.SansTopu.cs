@@ -55,7 +55,7 @@ namespace Taviloglu.MilliPiyango.ApiClient
 
         LotoResult ISansTopuClient.GetResult(DateTime drawDate, string savePath)
         {
-            return GetResult<LotoResult>(drawDate, "sanstopu", "", savePath);
+            return GetResultFromWeb<LotoResult>(drawDate, "sanstopu", "", savePath);
         }
     }
 }

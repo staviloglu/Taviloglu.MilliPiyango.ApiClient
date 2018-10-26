@@ -41,7 +41,7 @@ namespace Taviloglu.MilliPiyango.ApiClient
 
         PiyangoResult IPiyangoClient.GetResult(DateTime drawDate, string savePath)
         {
-            return GetResult<PiyangoResult>(drawDate, "piyango", "", savePath);
+            return GetResultFromWeb<PiyangoResult>(drawDate, "piyango", "", savePath);
         }
     }
 }

@@ -8,7 +8,15 @@ namespace Taviloglu.MilliPiyango.ApiClient
 {
     public partial class MilliPiyangoApiClient
     {
-        private T GetResult<T>(DateTime drawDate, string name, string prefix, string savePath = null)
+        public T GetResultFromFile<T>(string resultFilePath)
+        {
+            var json = File.ReadAllText(resultFilePath);
+
+            return JsonConvert.DeserializeObject<T>(json);
+        }
+
+
+        private T GetResultFromWeb<T>(DateTime drawDate, string name, string prefix, string savePath = null)
         {
             if (drawDate == null)
             {
@@ -25,6 +33,8 @@ namespace Taviloglu.MilliPiyango.ApiClient
             return JsonConvert.DeserializeObject<T>(json);
         }
 
+       
+
         private static string DownloadResultJson(DateTime drawDate, string name, string prefix)
         {
             string json = string.Empty;
@@ -38,7 +48,7 @@ namespace Taviloglu.MilliPiyango.ApiClient
             return json;
         }
 
-        private decimal GetLotoPrize(LotoResult result, LotoGuess guess)
+        private decimal GetLotoPrize(LotoResult result, SixNumberGuess guess)
         {
             if (result == null)
             {
