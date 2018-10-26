@@ -10,7 +10,7 @@ namespace Taviloglu.MilliPiyango.ApiClient.SuperLoto
         {
             if (numbers.Any(n => n < 1 || n > 54))
             {
-                throw new ArgumentOutOfRangeException(nameof(numbers), "numbers must be between 1 and 49");
+                throw new ArgumentOutOfRangeException(nameof(numbers), "numbers must be between 1 and 54");
             }
         }
     }

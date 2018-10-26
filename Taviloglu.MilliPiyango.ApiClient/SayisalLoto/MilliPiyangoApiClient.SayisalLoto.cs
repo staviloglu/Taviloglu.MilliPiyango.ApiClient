@@ -12,12 +12,6 @@ namespace Taviloglu.MilliPiyango.ApiClient
             return GetLotoPrize(result, guess);
         }
 
-        decimal ISayisalLotoClient.GetPrize(DateTime drawDate, SayisalLotoGuess guess)
-        {
-            var result = GetResult<LotoResult>(drawDate, "sayisal", "SAY_");
-            return GetLotoPrize(result, guess);
-        }
-
         LotoResult ISayisalLotoClient.GetResult(DateTime drawDate, string savePath)
         {
             return GetResult<LotoResult>(drawDate, "sayisal", "SAY_", savePath);

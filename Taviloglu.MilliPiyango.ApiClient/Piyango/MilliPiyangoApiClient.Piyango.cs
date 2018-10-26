@@ -37,11 +37,7 @@ namespace Taviloglu.MilliPiyango.ApiClient
             return prize;
         }
 
-        decimal IPiyangoClient.GetPrize(DateTime drawDate, PiyangoGuess guess)
-        {
-            var result = GetResult<PiyangoResult>(drawDate, "piyango", "");
-            return Piyango.GetPrize(result, guess);
-        }
+        
 
         PiyangoResult IPiyangoClient.GetResult(DateTime drawDate, string savePath)
         {

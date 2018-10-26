@@ -12,12 +12,6 @@ namespace Taviloglu.MilliPiyango.ApiClient
             return GetLotoPrize(result, guess);
         }
 
-        decimal ISuperLotoClient.GetPrize(DateTime drawDate, SuperLotoGuess guess)
-        {
-            var result = GetResult<LotoResult>(drawDate, "superloto", "");
-            return GetLotoPrize(result, guess);
-        }
-
         LotoResult ISuperLotoClient.GetResult(DateTime drawDate, string savePath)
         {
             return GetResult<LotoResult>(drawDate, "superloto", "", savePath);

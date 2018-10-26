@@ -7,7 +7,6 @@ namespace Taviloglu.MilliPiyango.ApiClient
     {
 
         decimal GetPrize(LotoResult result, SuperLotoGuess guess);
-        decimal GetPrize(DateTime drawDate, SuperLotoGuess guess);
         LotoResult GetResult(DateTime drawDate, string savePath = null);
     }
 }

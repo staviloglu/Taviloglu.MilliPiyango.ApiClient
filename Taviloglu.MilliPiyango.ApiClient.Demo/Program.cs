@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Taviloglu.MilliPiyango.ApiClient.SayisalLoto;
 using Taviloglu.MilliPiyango.ApiClient.SuperLoto;
+using Taviloglu.MilliPiyango.ApiClient.Extensions;
 
 namespace Taviloglu.MilliPiyango.ApiClient.Demo
 {
@@ -10,10 +11,16 @@ namespace Taviloglu.MilliPiyango.ApiClient.Demo
         static void Main(string[] args)
         {
             var milliPiyangonClient = new MilliPiyangoApiClient();
-            var result = milliPiyangonClient.SuperLoto.GetResult(new DateTime(2018, 10, 18));
-            var newResult = milliPiyangonClient.Piyango.GetResult(new DateTime(2018, 1, 29));
-            var prizem = milliPiyangonClient.Piyango.GetPrize(new DateTime(2018, 1, 29), new Piyango.PiyangoGuess(new List<int> { 6, 7, 1, 8, 1, 5 }));
+            //var result = milliPiyangonClient.SuperLoto.GetResult(new DateTime(2018, 10, 18));
+            //var newResult = milliPiyangonClient.Piyango.GetResult(new DateTime(2018, 1, 29));
+            //var prizem = milliPiyangonClient.Piyango.GetPrize(new DateTime(2018, 1, 29), new Piyango.PiyangoGuess(new List<int> { 6, 7, 1, 8, 1, 5 }));
 
+
+
+            //var sansTopuResult = milliPiyangonClient.SansTopu.GetResult(new DateTime(2018, 10, 17));
+            //var sansTopuPrize = milliPiyangonClient.SansTopu.GetPrize(sansTopuResult, new SansTopu.SansTopuGuess(new List<int> { 19, 26, 18, 3, 5 }, 5));
+
+            var sansTopuPrize2 = milliPiyangonClient.SansTopu.GetPrize(new DateTime(2018, 10, 17), new SansTopu.SansTopuGuess(new List<int> { 19, 26, 18, 3, 5 }, 5));
 
             Console.Read();
         }
