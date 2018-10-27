@@ -15,6 +15,7 @@ namespace Taviloglu.MilliPiyango.ApiClient.Demo
             //var newResult = milliPiyangonClient.Piyango.GetResult(new DateTime(2018, 1, 29));
             //var prizem = milliPiyangonClient.Piyango.GetPrize(new DateTime(2018, 1, 29), new Piyango.PiyangoGuess(new List<int> { 6, 7, 1, 8, 1, 5 }));
 
+            //var onNumaraResult = milliPiyangonClient.GetResultFromFile<LotoResult>("onnumara-20181015.json");
 
 
             //var sansTopuResult = milliPiyangonClient.SansTopu.GetResult(new DateTime(2018, 10, 17));
