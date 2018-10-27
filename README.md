@@ -3,7 +3,7 @@
 
 ## Usage [![NuGet](https://img.shields.io/nuget/v/Taviloglu.MilliPiyango.ApiClient.svg)](https://www.nuget.org/packages/Taviloglu.MilliPiyango.ApiClient/) [![NuGet Downloads](https://img.shields.io/nuget/dt/Taviloglu.MilliPiyango.ApiClient.svg)](https://www.nuget.org/packages/Taviloglu.MilliPiyango.ApiClient/)
 
-### Get Result
+### Get Result from web
 ```csharp
 var milliPiyangonClient = new MilliPiyangoApiClient();
 var onNumaraResult = milliPiyangonClient.OnNumara.GetResult(new DateTime(2018, 10, 15));
@@ -12,6 +12,12 @@ var onNumaraResult = milliPiyangonClient.OnNumara.GetResult(new DateTime(2018, 1
 ```csharp
 var milliPiyangonClient = new MilliPiyangoApiClient();
 var onNumaraResult = milliPiyangonClient.OnNumara.GetResult(new DateTime(2018, 10, 15), "onnumara-20181015.json");
+```
+
+### Get Result from file
+```csharp
+var milliPiyangonClient = new MilliPiyangoApiClient();
+var onNumaraResult = milliPiyangonClient.GetResultFromFile<LotoResult>("onnumara-20181015.json");
 ```
 
 ### Get Prize 
