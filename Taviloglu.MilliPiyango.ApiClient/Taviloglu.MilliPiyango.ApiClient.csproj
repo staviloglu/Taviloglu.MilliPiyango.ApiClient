@@ -2,6 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Sinan Taviloglu</Authors>
+    <Description>.NET Client for Milli Piyango Lotteries (Turkey’s National Lottery Administration).</Description>
+    <Copyright>Copyright (c) 2018 SINAN TAVILOGLU</Copyright>
+    <PackageLicenseUrl>https://github.com/staviloglu/Taviloglu.MilliPiyango.ApiClient/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/staviloglu/Taviloglu.MilliPiyango.ApiClient</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/staviloglu/Taviloglu.MilliPiyango.ApiClient.git</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageTags>milli-piyango super-loto sans-topu sayisal-loto api client turkey lottery</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
