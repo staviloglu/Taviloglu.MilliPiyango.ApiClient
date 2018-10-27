@@ -11,6 +11,10 @@
     <RepositoryType>Git</RepositoryType>
     <PackageTags>milli-piyango super-loto sans-topu sayisal-loto api client turkey lottery</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
+    <FileVersion>1.0.2.0</FileVersion>
+    <Version>1.0.2</Version>
+    <PackageReleaseNotes>- OnNumaraClient GetPrize extension added</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
