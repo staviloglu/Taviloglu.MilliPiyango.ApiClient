@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using Taviloglu.MilliPiyango.ApiClient.OnNumara;
 using Taviloglu.MilliPiyango.ApiClient.Piyango;
 using Taviloglu.MilliPiyango.ApiClient.SansTopu;
 using Taviloglu.MilliPiyango.ApiClient.SayisalLoto;
@@ -29,6 +28,12 @@ namespace Taviloglu.MilliPiyango.ApiClient.Extensions
         }
 
         public static decimal GetPrize(this ISansTopuClient client, DateTime drawDate, SansTopuGuess guess)
+        {
+            var result = client.GetResult(drawDate);
+            return client.GetPrize(result, guess);
+        }
+
+        public static decimal GetPrize(this IOnNumaraClient client, DateTime drawDate, OnNumaraGuess guess)
         {
             var result = client.GetResult(drawDate);
             return client.GetPrize(result, guess);

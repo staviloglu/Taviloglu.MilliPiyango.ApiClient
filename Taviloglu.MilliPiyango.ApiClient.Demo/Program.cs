@@ -22,8 +22,9 @@ namespace Taviloglu.MilliPiyango.ApiClient.Demo
 
             //var sansTopuPrize2 = milliPiyangonClient.SansTopu.GetPrize(new DateTime(2018, 10, 17), new SansTopu.SansTopuGuess(new List<int> { 19, 26, 18, 3, 5 }, 5));
 
-            var onNumaraResult = milliPiyangonClient.OnNumara.GetResult(new DateTime(2018, 10, 15));
+            var onNumaraResult = milliPiyangonClient.OnNumara.GetResult(new DateTime(2018, 10, 15),"onnumara-20181015.json");
             var onNumaraPrize = milliPiyangonClient.OnNumara.GetPrize(onNumaraResult, new OnNumara.OnNumaraGuess(new List<int> { 1, 8, 14, 24, 25, 35, 41, 9, 10, 11 }));
+            onNumaraPrize = milliPiyangonClient.OnNumara.GetPrize(new DateTime(2018, 10, 15), new OnNumara.OnNumaraGuess(new List<int> { 1, 8, 14, 24, 25, 35, 41, 9, 10, 11 }));
 
             Console.Read();
         }
